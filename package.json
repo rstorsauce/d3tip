@@ -1,0 +1,20 @@
+{
+  "name"             : "d3tip",
+  "description"      : "D3 Tooltip",
+  "version"          : "0.1.0",
+  "author"           : {
+    "name"  : "Lee Seoyeon",
+    "email" : "i@ssen.name",
+    "url"   : "https://iamssen.github.io"
+  },
+  "license"          : "MIT",
+  "repository"       : {
+    "type" : "git",
+    "url"  : "git://github.com/iamssen/d3tip.git"
+  },
+  "peerDependencies" : {
+    "d3" : "latest"
+  },
+  "typings"          : "./d3tip.d.ts",
+  "main"             : "./d3tip.js"
+}
