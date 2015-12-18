@@ -3,7 +3,7 @@
 ```
 import * as d3 from 'd3';
 import d3tip from 'd3tip';
-import 'd3tip/d3tip.css!';
+import 'd3tip/dist/d3tip.css!';
 
 d3.select('#button')
   .call(d3tip({

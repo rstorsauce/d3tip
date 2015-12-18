@@ -2,12 +2,10 @@
 	"compilerOptions": {
 		"module": "commonjs",
 		"target": "es5",
-		"declaration": true,
 		"sourceMap": true,
 		"removeComments": true,
-		"noImplicitAny": false
-	},
-	"files": [
-		"d3tip.ts"
-	]
+		"noImplicitAny": false,
+		"declaration": true,
+		"outDir": "../dist"
+	}
 }
