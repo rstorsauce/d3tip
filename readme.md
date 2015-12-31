@@ -1,4 +1,6 @@
-# D3 Tooltip 
+# D3 Tooltip
+
+Sample: [Web Site](http://iamssen.github.io/d3tip/) [Source Code](https://github.com/iamssen/d3tip/tree/gh-pages)
 
 ```
 import * as d3 from 'd3';
@@ -7,11 +9,12 @@ import 'd3tip/dist/d3tip.css!';
 
 d3.select('#button')
   .call(d3tip({
-    formatter: (d) => d.toString(),
-    direction: 'top'
+    html: d => d.toString()
   }))
 ```
 
-- `formatter?: (d:Datum, i?:number, o?:number) => string`
-- `direction?: string = 'top|bottom|left|right'`
-- `classed?: string` ← Add css classname to tooltip div
+- `html: string|(d?:Datum, i?:number, o?:number) => string`
+- `classed?: string[]|(d?:Datum, i?:number, o?:number) => string[]`
+- `distance?: number`
+- `target?: string = 'pointer|element'`
+- `position?: string|(d?:Datum, i?:number, o?:number) => string = 'left|right|top|bottom|topLeft|topRight|bottomLeft|bottomRight'`
