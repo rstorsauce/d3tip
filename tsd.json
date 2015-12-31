@@ -5,11 +5,11 @@
 	"path": "src/typings",
 	"bundle": "src/typings/tsd.d.ts",
 	"installed": {
-		"d3/d3.d.ts": {
-			"commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
-		},
 		"jquery/jquery.d.ts": {
-			"commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
+			"commit": "dc9dabe74a5be62613b17a3605309783a12ff28a"
+		},
+		"d3/d3.d.ts": {
+			"commit": "dc9dabe74a5be62613b17a3605309783a12ff28a"
 		}
 	}
 }
