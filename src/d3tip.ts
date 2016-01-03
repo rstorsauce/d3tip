@@ -1,4 +1,5 @@
 /// <reference path="typings/tsd.d.ts"/>
+if (window && !window.hasOwnProperty('exports')) window['exports'] = {};
 
 enum POS {TOP, BOTTOM, LEFT, RIGHT, TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT}
 enum MODE {ELEMENT, POINTER}

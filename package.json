@@ -1,7 +1,7 @@
 {
   "name"             : "d3tip",
   "description"      : "D3 Tooltip",
-  "version"          : "0.4.0",
+  "version"          : "0.4.2",
   "author"           : {
     "name"  : "Lee Seoyeon",
     "email" : "i@ssen.name",

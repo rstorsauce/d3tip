@@ -1,3 +1,5 @@
+if (window && !window.hasOwnProperty('exports'))
+    window['exports'] = {};
 var POS;
 (function (POS) {
     POS[POS["TOP"] = 0] = "TOP";
