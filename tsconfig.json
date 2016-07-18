@@ -1,0 +1,27 @@
+{
+  "compilerOptions" : {
+    "module" : "commonjs",
+    "target" : "es5",
+    "moduleResolution" : "node",
+    "outDir" : "dist",
+    "rootDir" : ".",
+    "sourceMap" : true,
+    "emitDecoratorMetadata" : true,
+    "experimentalDecorators" : true,
+    "jsx" : "react",
+    "lib" : [
+      "dom",
+      "es5",
+      "es6"
+    ],
+    "typeRoots" : [
+      "node_modules"
+    ],
+    "types" : [
+      "types.d3"
+    ]
+  },
+  "exclude" : [
+    "node_modules"
+  ]
+}
