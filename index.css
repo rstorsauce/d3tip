@@ -6,4 +6,5 @@ div.d3tip {
   padding: 10px;
   box-sizing: border-box;
   transition-duration: 0.3s;
-  transition-timing-function: ease-out; }
+  transition-timing-function: ease-out;
+}

@@ -1,30 +1,28 @@
 {
-  "name"             : "d3tip",
-  "description"      : "D3 Tooltip",
-  "version"          : "0.4.2",
-  "author"           : {
-    "name"  : "Lee Seoyeon",
-    "email" : "i@ssen.name",
-    "url"   : "https://iamssen.github.io"
+  "name": "d3tip",
+  "description": "D3 Tooltip",
+  "version": "0.5.0",
+  "author": {
+    "name": "Lee Seoyeon",
+    "email": "i@ssen.name",
+    "url": "https://iamssen.github.io"
   },
-  "license"          : "MIT",
-  "repository"       : {
-    "type" : "git",
-    "url"  : "git://github.com/iamssen/d3tip.git"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iamssen/d3tip.git"
   },
-  "main"             : "dist/d3tip.js",
-  "typings"          : "dist/d3tip.d.ts",
-  "scripts"          : {
-    "build" : "gulp build"
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsc"
   },
-  "devDependencies"  : {
-    "gulp"       : "*",
-    "gulp-clean" : "*",
-    "gulp-sass"  : "*",
-    "gulp-tsc"   : "*"
+  "dependencies": {
+    "d3-selection": "~1.0.0"
   },
-  "peerDependencies" : {
-    "jquery" : "*",
-    "d3"     : "*"
+  "devDependencies": {
+    "types.d3": "~0.1.0",
+    "typescript": "^2.0.0"
   }
 }
