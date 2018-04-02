@@ -1,5 +1,6 @@
 "use strict";
-var d3_selection_1 = require('d3-selection');
+Object.defineProperty(exports, "__esModule", { value: true });
+var d3_selection_1 = require("d3-selection");
 var DEFAULT_DISTANCE = 10;
 var DEFAULT_POSITION = 'topRight';
 function option(d, i, nodes, option, defaultValue) {
@@ -19,8 +20,8 @@ function d3tip(options) {
             args[_i - 1] = arguments[_i];
         }
         var tipController;
-        selection
-            .on('mouseover', function (d, i, nodes) {
+        var tipOpened = false;
+        var openTip = function (d, i, nodes) {
             var html = option(d, i, nodes, options.html, '-');
             var classed = option(d, i, nodes, options.classed, []);
             var targetElement = nodes[i];
@@ -49,16 +50,18 @@ function d3tip(options) {
             }
             //else if (mode === MODE.ANGLE) {}
             //else if (mode === MODE.ANGLE_WITH_POINTER) {}
-        })
-            .on('mouseout', function () {
+        };
+        var closeTip = function () {
             tipController.destroy();
             tipController = null;
-        });
+        };
+        selection
+            .on('click', openTip)
+            .on('mouseout', closeTip);
     };
 }
-Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = d3tip;
-var ElementBaseTipController = (function () {
+var ElementBaseTipController = /** @class */ (function () {
     function ElementBaseTipController(tip, targetBound, distance, position) {
         this.tip = tip;
         var documentWidth = window.innerWidth;
@@ -152,7 +155,7 @@ var ElementBaseTipController = (function () {
     };
     return ElementBaseTipController;
 }());
-var PointerBaseTipController = (function () {
+var PointerBaseTipController = /** @class */ (function () {
     function PointerBaseTipController(tip, distance, pos) {
         var _this = this;
         this.tip = tip;
