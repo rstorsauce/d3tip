@@ -42,10 +42,10 @@ function option<T>(d:any, i:number, nodes:Node[], option:T|((d?:any, i?:number, 
 export default function d3tip(options:Options = {}):(selection:Selection, ...args) => any {
   return (selection:Selection, ...args) => {
     let tipController:TipController;
-    
-    selection
-      .on('mouseover', (d:any, i:number, nodes:Node[]) => {
-        const html:string = option<string>(d, i, nodes, options.html, '-');
+    let tipOpened = false;
+
+    const openTip = (d: any, i: number, nodes: Node[]) => {
+      const html:string = option<string>(d, i, nodes, options.html, '-');
         const classed:string[] = option<string[]>(d, i, nodes, options.classed, []);
         
         const targetElement:Element = nodes[i] as Element;
@@ -76,11 +76,16 @@ export default function d3tip(options:Options = {}):(selection:Selection, ...arg
         }
         //else if (mode === MODE.ANGLE) {}
         //else if (mode === MODE.ANGLE_WITH_POINTER) {}
-      })
-      .on('mouseout', () => {
-        tipController.destroy();
-        tipController = null;
-      })
+    };
+
+    const closeTip = () => {
+      tipController.destroy();
+      tipController = null;
+    };
+    
+    selection
+      .on('mouseover', openTip)
+      .on('mouseout', closeTip)
   }
 }
 
