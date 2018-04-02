@@ -84,7 +84,7 @@ export default function d3tip(options:Options = {}):(selection:Selection, ...arg
     };
     
     selection
-      .on('mouseover', openTip)
+      .on('click', openTip)
       .on('mouseout', closeTip)
   }
 }
